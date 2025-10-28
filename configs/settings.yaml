@@ -1,0 +1,35 @@
+data:
+  exchange_id: "binance"
+  symbol: "BTC/USDT"
+  timeframe: "1h"
+  limit: 1000 
+  max_candles: 5000
+
+
+features:
+  rsi_window: 14
+  ema_fast: 21
+  ema_slow: 55
+  macd_fast: 12
+  macd_slow: 26
+  macd_signal: 9
+  rvol_window: 24
+  rv_window: 24
+
+label:
+  horizon: 6  # horas
+
+model:
+  rf:
+    n_estimators: 400
+    max_depth: 8
+    random_state: 42
+
+serve:
+  threshold_up: 0.5
+
+validation:
+  train_size: 1000
+  test_size: 200
+  step: 200
+  embargo: 6   # igual al horizon por defecto
