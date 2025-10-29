@@ -6,7 +6,7 @@
 
 ---
 
-## 🧠 Descripción general
+##  Descripción general
 
 **CryptoML Predictor** es una aplicación de *machine learning* diseñada para **predecir la evolución de precios de criptomonedas** (como BTC/USDT) a partir de datos históricos de mercado y variables técnicas, macro y de sentimiento.  
 
@@ -48,7 +48,7 @@ crypto_ml/
 
 ---
 
-## 🚀 Flujo de trabajo
+##  Flujo de trabajo
 
 ### 1️⃣ Recolección de datos
 - Se utilizan APIs públicas (Binance vía **ccxt**).  
@@ -91,7 +91,7 @@ Simula predicción real, entrenando en una ventana y evaluando en la siguiente, 
 python -m src.models.train_rf   --symbol BTC/USDT   --exchange binance   --timeframe 1h   --horizon 6   --train_size 1000   --test_size 200   --step 200   --embargo 6
 ```
 
-📊 Salida típica:
+ Salida típica:
 
 ```
 [fold 01] acc=0.53 mcc=0.12 auc=0.59 brier=0.27 | sharpe=0.30
@@ -99,7 +99,7 @@ python -m src.models.train_rf   --symbol BTC/USDT   --exchange binance   --timef
 ...
 ```
 
-🧾 Reporte JSON en `artifacts/wfv_report_binance_BTC-USDT_1h_6h.json`.
+ Reporte JSON en `artifacts/wfv_report_binance_BTC-USDT_1h_6h.json`.
 
 ---
 
@@ -139,7 +139,7 @@ Endpoints:
 
 ---
 
-## 📈 Próximas mejoras
+##  Próximas mejoras
 
 - Integrar **Optuna** para ajuste automático de hiperparámetros.  
 - Añadir modelos alternativos (XGBoost, LightGBM, LSTM, Transformers).  
@@ -149,7 +149,7 @@ Endpoints:
 
 ---
 
-## 💡 Principales aprendizajes técnicos
+##  Principales aprendizajes técnicos
 
 - ✅ Cómo estructurar un proyecto de ML financiero **modular y escalable**.  
 - ✅ Evitar *data leakage* (purge, embargo, shift, scaling aislado).  
@@ -159,7 +159,7 @@ Endpoints:
 
 ---
 
-## 🧩 Stack tecnológico
+##  Stack tecnológico
 
 | Componente | Tecnología |
 |-------------|-------------|
@@ -184,12 +184,13 @@ Endpoints:
 | Brier | 0.27 |
 | Sharpe-like | ≈ 0.25 |
 
-📉 **Conclusión:**  
+ **Conclusión:**  
 El modelo ofrece una señal **débil pero consistente**, sin sobreajuste y con buena estabilidad temporal.  
 Base sólida para incorporar señales más ricas (macro, on-chain, social).
 
 ---
 
-## 📜 Licencia
+##  Licencia
 
 MIT License – uso libre con atribución.
+
